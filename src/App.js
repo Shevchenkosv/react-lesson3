@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Message from "./Message";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import ChatLists from "./ChatLists";
+import GutterlessList from "./ChatLists";
 import './App.css';
 
 
@@ -23,7 +23,7 @@ function App() {
   return (
 
     <div className="App">
-      <ChatLists />
+      <GutterlessList />
       {messageList.map((value, index) => {
         return (
           <Message author={value.author} text={value.text} key={index} />

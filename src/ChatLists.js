@@ -31,7 +31,7 @@ function GutterlessList() {
         </p>
     });
 
-    return <div>(
+    return <div>
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
             {objArr.map((obj) => (
                 <ListItem
@@ -43,13 +43,13 @@ function GutterlessList() {
                         </IconButton>
                     }
                 >
-                    <ListItemText primary={`${obj.name},${obj.textChat}`} />
+                    <ListItemText primary={`${obj.name}, ${obj.textChat}`} />
+
                 </ListItem>
-            ))};
+            ))}
         </List>
-        );
-        {GutterlessList};
-    </div>
+
+    </div >
 }
 
-export default ChatLists;
+export default GutterlessList;
