@@ -1,0 +1,27 @@
+.Chatspage{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.header{
+    height: 90px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    padding-right: 10px;
+    align-items: center;
+
+}
+.Navlink{
+    margin-right: 7px;
+    color: black;
+}
+.Outlet{
+    text-align: center;
+    margin-top: 30px;
+    height: 70vh;
+}
+.footer{
+    height: 70px;
+    background-color: cornflowerblue;
+}
