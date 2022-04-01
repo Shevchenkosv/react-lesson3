@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 
 
 const chatList = [
@@ -22,23 +22,13 @@ const chatList = [
 
 const SinglePage = () => {
     const { id } = useParams()
-    const [chat, setChat] = useState(chatList)
-
-    useEffect(() => {
-        fetch(`http://localhost:3000/chats/${id}`)
-            .then(res => res.json())
-            .then(data => setChat(data))
-    }, [id])
+    const chatElement = chatList.find(chat => chat.id === +id)
     return (
         <div>
-            {
-                chat &&
 
-                <>
-                    <h1>chat: {chat.textChat}</h1>
-                    <h2>name: {chat.name}</h2>
-                </>
-            }
+            <h1>chat: {chatElement.textChat}</h1>
+            <h2>name: {chatElement.name}</h2>
+
         </div>
 
 
