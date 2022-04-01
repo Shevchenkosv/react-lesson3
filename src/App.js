@@ -21,7 +21,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/chats" element={<ChatsPage />} />
-          <Route path="/chats/:chatId" element={< SinglePage />} />
+          <Route path="/chats/:id" element={< SinglePage />} />
           <Route path="*" element={< NotFoundPage />} />
         </Route>
       </Routes>
