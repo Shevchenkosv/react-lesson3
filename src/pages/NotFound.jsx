@@ -1,12 +1,12 @@
 import React from "react";
 import "./pages.css"
 
-const HomePage = () => {
+const NotFound = () => {
     return (
         <div>
-            Дом
+            Страница не найдена
         </div>
     );
 };
 
-export default HomePage;
+export default NotFound;

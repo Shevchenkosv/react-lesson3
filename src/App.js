@@ -1,31 +1,21 @@
-
-import React from "react";
-
-import './Index.css';
-import { Routes, Route } from 'react-router-dom';
-import ChatsPage from './pages/ChatsPage';
-import HomePage from "./pages/HomePage";
-import NotFoundPage from "./pages/NotFoundPage";
-import ProfilePage from "./pages/ProfilePage";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
-import SinglePage from "./pages/SinglePage";
-
-
+import HomePage from "./pages/HomePage";
+import Chat from "./pages/Chat";
+import Profile from "./pages/Profile";
+import NotFound from "./pages/NotFound";
 
 function App() {
-
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/chats" element={<ChatsPage />} />
-          <Route path="/chats/:id" element={< SinglePage />} />
-          <Route path="*" element={< NotFoundPage />} />
-        </Route>
-      </Routes>
-    </div>
-  )
-}
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={< HomePage />} />
+        <Route path='/chats' element={<Chat />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='*' element={<NotFound />} />
+      </Route>
+    </Routes>
+  );
+};
+
 export default App;
